@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Harvest
+Comment=Harvest Time Tracking
+Exec=harvest-desktop
+Icon=harvest-desktop
+Type=Application
+Categories=Office;ProjectManagement;
+StartupWMClass=harvest-desktop

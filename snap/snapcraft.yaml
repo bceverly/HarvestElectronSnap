@@ -1,0 +1,32 @@
+name: harvest-desktop
+version: '1.0.0'
+summary: Desktop wrapper for Harvest time tracking
+description: |
+  Electron-based desktop application that wraps the Harvest
+  (getharvest.com) web interface into a native desktop experience.
+
+base: core24
+grade: stable
+confinement: strict
+compression: lzo
+
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+
+apps:
+  harvest-desktop:
+    command: harvest-desktop --no-sandbox
+    extensions: [gnome]
+    plugs:
+      - network
+      - network-bind
+      - browser-support
+      - audio-playback
+      - screen-inhibit-control
+
+parts:
+  harvest-desktop:
+    plugin: dump
+    source: dist/linux-unpacked

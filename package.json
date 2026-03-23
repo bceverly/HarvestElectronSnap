@@ -1,0 +1,40 @@
+{
+  "name": "harvest-desktop",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Harvest time tracking",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux dir",
+    "dist": "electron-builder --linux snap"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.getharvest.desktop",
+    "productName": "Harvest",
+    "linux": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": ["x64"]
+        }
+      ],
+      "category": "Office",
+      "icon": "icons"
+    },
+    "snap": {
+      "confinement": "strict",
+      "grade": "stable",
+      "plugs": [
+        "default",
+        "camera",
+        "audio-playback"
+      ]
+    }
+  }
+}
