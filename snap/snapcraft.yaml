@@ -11,6 +11,8 @@ issues: https://github.com/bceverly/HarvestElectronSnap/issues
 source-code: https://github.com/bceverly/HarvestElectronSnap
 website: https://www.getharvest.com
 
+icon: snap/gui/harvest-desktop.png
+
 base: core24
 grade: stable
 confinement: strict
