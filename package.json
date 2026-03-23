@@ -1,6 +1,6 @@
 {
   "name": "harvest-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Electron wrapper for Harvest time tracking",
   "main": "main.js",
   "scripts": {
