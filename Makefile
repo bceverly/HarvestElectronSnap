@@ -1,4 +1,4 @@
-.PHONY: all deps icons build run install-desktop snap snap-install snap-remove snap-clean clean
+.PHONY: all deps icons lint test build run install-desktop snap snap-install snap-remove snap-clean clean
 
 NPM := npm
 ELECTRON := npx electron --no-sandbox
@@ -18,6 +18,15 @@ icons: icons/256x256.png
 
 icons/256x256.png: icons/harvest-original.png
 	python3 generate-icons.py
+
+# Lint all source files
+lint: deps
+	npx eslint *.js
+	ruff check *.py
+
+# Run unit tests
+test: deps
+	node --test test.js
 
 # Build the Electron app (unpacked directory)
 build: deps icons

@@ -9,10 +9,13 @@
     "dist": "electron-builder --linux snap"
   },
   "author": "",
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "devDependencies": {
     "electron": "^35.0.0",
-    "electron-builder": "^26.0.0"
+    "electron-builder": "^26.0.0",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "globals": "^16.0.0"
   },
   "build": {
     "appId": "com.getharvest.desktop",

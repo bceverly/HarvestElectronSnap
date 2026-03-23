@@ -1,7 +1,6 @@
 const { app, BrowserWindow, shell, Menu, nativeImage } = require('electron');
 const path = require('path');
-
-const HARVEST_URL = 'https://id.getharvest.com/accounts';
+const { HARVEST_URL, isHarvestURL } = require('./config');
 
 function createWindow() {
   // Load multiple icon sizes for best taskbar/dock display
@@ -100,13 +99,7 @@ function createWindow() {
 
   // Open external links in the system browser
   win.webContents.setWindowOpenHandler(({ url }) => {
-    const harvestDomains = [
-      'getharvest.com',
-      'harvestapp.com',
-      'id.getharvest.com'
-    ];
-    const parsed = new URL(url);
-    if (harvestDomains.some(d => parsed.hostname.endsWith(d))) {
+    if (isHarvestURL(url)) {
       return { action: 'allow' };
     }
     shell.openExternal(url);

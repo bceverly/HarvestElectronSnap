@@ -1,9 +1,15 @@
 name: harvest-desktop
+title: Harvest Desktop
 version: '1.0.0'
 summary: Desktop wrapper for Harvest time tracking
 description: |
   Electron-based desktop application that wraps the Harvest
   (getharvest.com) web interface into a native desktop experience.
+license: BSD-2-Clause
+contact: https://github.com/bceverly/HarvestElectronSnap/issues
+issues: https://github.com/bceverly/HarvestElectronSnap/issues
+source-code: https://github.com/bceverly/HarvestElectronSnap
+website: https://www.getharvest.com
 
 base: core24
 grade: stable
