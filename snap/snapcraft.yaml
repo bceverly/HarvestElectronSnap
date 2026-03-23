@@ -25,6 +25,7 @@ apps:
   harvest-desktop:
     command: harvest-desktop --no-sandbox
     extensions: [gnome]
+    common-id: com.getharvest.desktop
     plugs:
       - network
       - network-bind

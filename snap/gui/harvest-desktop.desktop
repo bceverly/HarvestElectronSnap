@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Harvest
+Comment=Harvest Time Tracking
+Exec=harvest-desktop
+Icon=${SNAP}/meta/gui/harvest-desktop.png
+Type=Application
+Categories=Office;ProjectManagement;
+StartupWMClass=harvest-desktop
