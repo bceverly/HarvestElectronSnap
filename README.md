@@ -25,9 +25,12 @@ make snap-install
 
 | Target | Description |
 |---|---|
-| `make run` | Launch the app locally for testing |
-| `make build` | Build the Electron app (unpacked dir in `dist/`) |
+| `make deps` | Install Node.js dependencies |
 | `make icons` | Generate PNG icons from the Harvest logo |
+| `make lint` | Lint JavaScript (ESLint) and Python (ruff) source files |
+| `make test` | Run unit tests using Node.js built-in test runner |
+| `make build` | Build the Electron app (unpacked dir in `dist/`) |
+| `make run` | Launch the app locally for testing |
 | `make install-desktop` | Install `.desktop` file and icon for taskbar integration |
 | `make snap` | Build the app and package it as a `.snap` |
 | `make snap-install` | Install the built snap locally |
